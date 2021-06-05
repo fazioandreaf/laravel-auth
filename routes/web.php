@@ -20,3 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/pages/home', 'ControllerMain@home')->name('homee');
+Route::get('/pilot/{id}', 'ControllerMain@pilot')->name('pilot');
+Route::get('/add', 'ControllerMain@add')->name('add');
+Route::post('/add_function', 'ControllerMain@add_function')->name('add_function');

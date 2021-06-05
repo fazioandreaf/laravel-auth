@@ -1,8 +1,69 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
-@import 'variables';
-
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    body {
+        background-color: lightgray;
+        text-align: center;
+        header,
+        footer {
+            background-color: gray;
+        }
+        ul {
+            list-style-type: georgian;
+        }
+        li {
+            display: flex;
+            padding: 2px;
+            > div {
+                border: 1px solid black;
+                padding: 5px;
+                span {
+                    color: white;
+                    font-weight: bolder;
+                    font-style: italic;
+                }
+            }
+        }
+        .brand {
+            background-color: lightgreen;
+        }
+        .pilot {
+            background-color: lightblue;
+        }
+        .car {
+            background-color: lightpurple;
+        }
+        .pilot_detail {
+            font-style: italic;
+            color: white;
+            background-color: lightgreen;
+        }
+        .add {
+            position: fixed;
+            background-color: purple;
+            top: 5px;
+            right: 20px;
+            a {
+                font-size: 3rem;
+                padding: 20px;
+                text-decoration: none;
+                color: white;
+                &:hover {
+                    color: yellow;
+                    font-style: italic;
+                }
+            }
+        }
+        .pilot_form {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 50%;
+            margin: 0 auto;
+            .pilot_form-class {
+                margin: 3px;
+            }
+        }
+    }
+}
