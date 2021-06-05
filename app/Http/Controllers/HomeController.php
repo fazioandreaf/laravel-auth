@@ -57,8 +57,10 @@ class HomeController extends Controller
     }
     public function delete($id){
         $car=Car::findorFail($id);
-        dd($car);
-        return view('pages.delete');
+        $car->delete=1;
+        $car->save();
+        // dd($car);
+        return redirect()-> route('home');
     }
         public function edit($id){
         $car=Car::findorFail($id);

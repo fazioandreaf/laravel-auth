@@ -7,7 +7,7 @@
     </div>
     <ul>
         @foreach ($car as $item)
-        @if ($item->delete ==0)
+        @if ($item->delete !=0)
 
         @else
         <li>
