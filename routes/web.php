@@ -19,10 +19,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('hom');
 
 
-Route::get('/pages/home', 'ControllerMain@home')->name('homee');
+Route::get('/pages/home', 'ControllerMain@home')->name('home');
 Route::get('/pilot/{id}', 'ControllerMain@pilot')->name('pilot');
-Route::get('/add', 'ControllerMain@add')->name('add');
-Route::post('/add_function', 'ControllerMain@add_function')->name('add_function');
+Route::get('/add', 'HomeController@add')->name('add');
+Route::post('/add_function', 'HomeController@add_function')->name('add_function');
