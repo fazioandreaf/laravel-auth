@@ -28,4 +28,6 @@ Route::get('/add', 'HomeController@add')->name('add');
 Route::post('/add_function', 'HomeController@add_function')->name('add_function');
 Route::get('/delete/{id}', 'HomeController@delete')->name('delete');
 Route::get('/edit/{id}', 'HomeController@edit')->name('edit');
+Route::post('/edit_function/{id}', 'HomeController@edit_function')->name('edit_function');
+
 

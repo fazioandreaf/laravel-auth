@@ -63,9 +63,33 @@ class HomeController extends Controller
         return redirect()-> route('home');
     }
         public function edit($id){
-        $car=Car::findorFail($id);
-        dd($car);
-        return view('pages.edit');
+        $car=Car::findOrFail($id);
+        // dd($car -> brand );
+        $brand=Brand::all();
+        $pilot=Pilot::all();
+        return view('pages.edit',compact('car','brand','pilot'));
     }
+        public function edit_function(Request $request,$id){
+        // dd($request -> all());
+        $validate=$request -> validate([
+            'name'=>'required|string',
+            'model'=>'required|string',
+            'kW'=>'required|integer',
+            'brand_id'=>'required|integer',
+            // 'pilot_id'=>'required|integer',
+        ]);
+        $car=Car::findOrFail($id);
+        $car->update($validate);
+        // $car=Car::make($validate);
+        // dd($brand->name);
+        $car ->brand() -> associate($request->brand_id);
+        $car ->save();
+        // dd($request -> get('pilots_id'));
+        $car -> pilots() -> sync($request -> pilot_id);
+        $car -> save();
+        return redirect()->route('home');
+
+    }
+
 
 }
