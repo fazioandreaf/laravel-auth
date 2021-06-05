@@ -10,6 +10,7 @@ class Car extends Model
             'name',
             'model',
             'kW',
+            'delete',
         ];
         public function pilots(){
             return $this -> belongsToMany(Pilot::class);

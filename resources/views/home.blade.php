@@ -16,8 +16,8 @@
 
                     {{ __('You are logged in!') }}
                         <div>
-    <a href="{{route('home')}}">Ritorna alle auto</a>
-</div>
+                            <a href="{{route('home')}}">Ritorna alle auto</a>
+                        </div>
 
                 </div>
             </div>

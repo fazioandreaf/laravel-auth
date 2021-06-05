@@ -40,7 +40,14 @@
                     ,
                 </span>
                 @endforeach
-
+            </div>
+            <div>
+                <a href="{{route('delete',$item->id)}}">
+                    &#10060;
+                </a>
+                <a href="">
+                    &#128394;
+                </a>
             </div>
         </li>
         @endforeach

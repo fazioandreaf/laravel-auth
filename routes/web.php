@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+Route::get('/logout', 'Auth\LoginController@logout')-> name('logout');
 Route::get('/home', 'HomeController@index')->name('hom');
 
 
@@ -26,3 +26,5 @@ Route::get('/pages/home', 'ControllerMain@home')->name('home');
 Route::get('/pilot/{id}', 'ControllerMain@pilot')->name('pilot');
 Route::get('/add', 'HomeController@add')->name('add');
 Route::post('/add_function', 'HomeController@add_function')->name('add_function');
+Route::get('/delete/{id}', 'HomeController@delete')->name('delete');
+

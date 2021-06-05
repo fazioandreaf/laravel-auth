@@ -55,5 +55,10 @@ class HomeController extends Controller
         return redirect()->route('home');
 
     }
+    public function delete($id){
+        $car=Car::findorFail($id);
+        dd($car);
+        return view('pages.delete');
+    }
 
 }

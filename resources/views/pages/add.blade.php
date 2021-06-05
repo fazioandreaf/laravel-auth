@@ -47,4 +47,7 @@
         </ul>
     </div>
 @endif
+<div>
+    <a href="{{route('home')}}">Ritorna alle auto</a>
+</div>
 @endsection
