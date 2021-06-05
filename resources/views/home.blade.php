@@ -15,6 +15,10 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                        <div>
+    <a href="{{route('home')}}">Ritorna alle auto</a>
+</div>
+
                 </div>
             </div>
         </div>
