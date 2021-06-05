@@ -60,5 +60,10 @@ class HomeController extends Controller
         dd($car);
         return view('pages.delete');
     }
+        public function edit($id){
+        $car=Car::findorFail($id);
+        dd($car);
+        return view('pages.edit');
+    }
 
 }

@@ -7,6 +7,9 @@
     </div>
     <ul>
         @foreach ($car as $item)
+        @if ($item->delete ==0)
+
+        @else
         <li>
             <div class="car">
                 <span>
@@ -45,12 +48,14 @@
                 <a href="{{route('delete',$item->id)}}">
                     &#10060;
                 </a>
-                <a href="">
+                <a href="{{route('edit',$item->id)}}">
                     &#128394;
                 </a>
             </div>
         </li>
+        @endif
         @endforeach
+
     </ul>
 
 @endsection

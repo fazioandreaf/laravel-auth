@@ -27,4 +27,5 @@ Route::get('/pilot/{id}', 'ControllerMain@pilot')->name('pilot');
 Route::get('/add', 'HomeController@add')->name('add');
 Route::post('/add_function', 'HomeController@add_function')->name('add_function');
 Route::get('/delete/{id}', 'HomeController@delete')->name('delete');
+Route::get('/edit/{id}', 'HomeController@edit')->name('edit');
 

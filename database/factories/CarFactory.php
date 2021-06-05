@@ -11,6 +11,6 @@ $factory->define(Car::class, function (Faker $faker) {
         'name'=>$faker->word,
         'model'=>$faker->word,
         'kW'=>$faker->numberBetween(500,40000),
-        'delete'=>$faker->boolean(),
+        'delete'=>$faker->boolean(false),
     ];
 });
