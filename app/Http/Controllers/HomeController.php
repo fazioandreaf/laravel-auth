@@ -24,11 +24,10 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
-    {
+    public function index(){
         return view('home');
     }
-        public function add(){
+    public function add(){
         $brand=Brand::all();
         $pilot=Pilot::all();
         return view('pages.add',compact('brand','pilot'));
@@ -62,14 +61,14 @@ class HomeController extends Controller
         // dd($car);
         return redirect()-> route('home');
     }
-        public function edit($id){
+    public function edit($id){
         $car=Car::findOrFail($id);
         // dd($car -> brand );
         $brand=Brand::all();
         $pilot=Pilot::all();
         return view('pages.edit',compact('car','brand','pilot'));
     }
-        public function edit_function(Request $request,$id){
+    public function edit_function(Request $request,$id){
         // dd($request -> all());
         $validate=$request -> validate([
             'name'=>'required|string',
